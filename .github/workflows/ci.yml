@@ -2,28 +2,26 @@ name: CMake Build
 
 on:
   push:
-    branch: [ main ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
-  jobs:
-    build:
-      name: Builde on Ubuntu
-      runs-on: ubuntu-latest
+jobs:
+  build:
+    name: Build on Ubuntu
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-        - name: install tools
-          run:
-            sudo apt update
-            sudo apt install -y ninja-build cmake g++
+      - name: Install tools
+        run: |
+          sudo apt update
+          sudo apt install -y ninja-build cmake g++
 
-        - name: Configure CMake
-          run:
-            cmake -S . -B build -G Ninja
+      - name: Configure CMake
+        run: cmake -S . -B build -G Ninja
 
-        - name: Build
-          run:
-            cmake --build build
+      - name: Build
+        run: cmake --build build
