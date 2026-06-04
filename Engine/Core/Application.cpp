@@ -14,15 +14,24 @@ void Application::Run(int n)
     vector<int> intV;
     intV.push_back(n);
     intV.push_back(3);
+
     for (int i = 0; i < intV.size(); i++)
     {
         cout << intV[i] << endl;
     }
 }
 
+int Application::Count()
+{
+    cout << "in Count" << endl;
+    return 1;
+}
+
 int main()
 {
     Application app;
     app.Run(100);
+    int i = app.Count();
+    cout << i << "hi" << endl;
     return 0;
 }
