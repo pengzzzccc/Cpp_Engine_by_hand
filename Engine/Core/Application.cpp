@@ -4,25 +4,31 @@
 
 using namespace std;
 
-void Application::Run(int n)
+void Application::Run()
 {
     string s = "Hello Engine start";
-    cout << s << endl;
-
-    cout << "" << endl;
-
-    vector<int> intV;
-    intV.push_back(n);
-    intV.push_back(3);
-
-    for (int i = 0; i < intV.size(); i++)
-    {
-        cout << intV[i] << endl;
-    }
 }
 
-int main()
+void Application::Init()
 {
-    Application app;
-    app.Run(100);
+}
+
+void Application::Shutdown()
+{
+}
+
+void Application::RequestClose()
+{
+}
+
+void Application::IsRunning()
+{
+}
+
+void Application::PushLayer()
+{
+}
+
+void Application::PopLayer()
+{
 }

@@ -4,4 +4,4 @@
 class Assert
 {
 public:
-}
+};
