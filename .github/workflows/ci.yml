@@ -22,7 +22,6 @@ on:
 
         - name: Configure CMake
           run:
-            cd /Cpp_Engine_by_hand
             cmake -S . -B build -G Ninja
 
         - name: Build
