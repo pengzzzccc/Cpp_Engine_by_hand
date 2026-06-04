@@ -1,0 +1,30 @@
+name: CMake Build
+
+on:
+  push:
+    branch: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  jobs:
+    build:
+      name: Builde on Ubuntu
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: install tools
+          run:
+            sudo apt update
+            sudo apt install -y ninja-build cmake g++
+
+        - name: Configure CMake
+          run:
+            cd /Cpp_Engine_by_hand
+            cmake -S . -B build -G Ninja
+
+        - name: Build
+          run:
+            cmake --build build

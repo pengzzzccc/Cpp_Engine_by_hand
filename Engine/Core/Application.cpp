@@ -9,8 +9,9 @@ void Application::Run()
     string s = "Hello Engine start";
 }
 
-void Application::Init()
+bool Application::Init()
 {
+    return true;
 }
 
 void Application::Shutdown()
@@ -25,10 +26,10 @@ void Application::IsRunning()
 {
 }
 
-void Application::PushLayer()
+void Application::PushLayer(Layer *)
 {
 }
 
-void Application::PopLayer()
+void Application::PopLayer(Layer *)
 {
 }

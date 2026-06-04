@@ -1,4 +1,5 @@
 // Engine/Core/LayerStack.h
+#pragma once
 
 class LayerStack
 {

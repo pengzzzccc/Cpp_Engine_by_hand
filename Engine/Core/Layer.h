@@ -1,4 +1,5 @@
 // Engine/Core/Layer.h
+#pragma once
 
 class Layer
 {
@@ -7,5 +8,5 @@ public:
     void OnDetach();
     void OnUpdate(float deltaTime);
     void OnRender();
-    bool OnEvent(const Event &);
+    bool OnEvent(); // need event
 };

@@ -1,5 +1,5 @@
 // Engine/Core/Assert.h
-#pragme once
+#pragma once
 
 class Assert
 {

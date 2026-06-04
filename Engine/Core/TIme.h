@@ -1,6 +1,7 @@
 // Engine/Core/Time.h
+#pragma once
 
-class
+class Time
 {
 public:
     double Now();
