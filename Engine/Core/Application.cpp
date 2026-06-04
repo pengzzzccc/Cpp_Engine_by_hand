@@ -6,7 +6,7 @@ using namespace std;
 
 void Application::Run(int n)
 {
-    string s = "Hello Engine in string";
+    string s = "Hello Engine start";
     cout << s << endl;
 
     cout << "" << endl;
@@ -21,17 +21,8 @@ void Application::Run(int n)
     }
 }
 
-int Application::Count()
-{
-    cout << "in Count" << endl;
-    return 1;
-}
-
 int main()
 {
     Application app;
     app.Run(100);
-    int i = app.Count();
-    cout << i << "hi" << endl;
-    return 0;
 }

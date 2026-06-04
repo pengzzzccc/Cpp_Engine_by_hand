@@ -356,3 +356,33 @@ cmake --build build
 
 - 工具可开关。
 - 工具关闭时不影响 Runtime。
+
+## 文件与函数阅读索引
+
+实现每个阶段时，按这个顺序阅读模块 README 中的“文件与函数职责表”：
+
+1. Core：先读 `Engine/Core/README.md`，建立 `Application`、`Layer`、`LayerStack`、`Time`、`Log`、`Assert` 的接口。
+2. Platform：再读 `Engine/Platform/README.md`，实现 SDL2 窗口、输入和 OpenGL Context 边界。
+3. Math：阅读 `Engine/Math/README.md`，补 Transform、AABB、Frustum、Ray。
+4. RHI：阅读 `Engine/RHI/README.md`，先写抽象接口，不写 OpenGL。
+5. RHI/OpenGL：阅读 `Engine/RHI/OpenGL/README.md`，再用 OpenGL 实现 RHI。
+6. Renderer：阅读 `Engine/Renderer/README.md`，实现 Renderer、FrameRenderer、RenderGraph、Mesh、Material、Camera 和渲染 Pass。
+7. Scene：阅读 `Engine/Scene/README.md`，实现 Entity 和 Component，并向 Renderer 提交 render packet。
+8. Assets：阅读 `Engine/Assets/README.md`，实现 AssetManager 和各类 Loader。
+9. Debug：阅读 `Engine/Debug/README.md`，实现 DebugDraw、Profiler、GpuMarker。
+10. Tools：阅读 `Engine/Tools/README.md`，后置实现 ImGui 工具。
+11. Sandbox：阅读 `Sandbox/README.md`，用 demo 场景验证引擎 API。
+12. Tests：阅读 `Tests/README.md`，按阶段补测试。
+
+推荐实现顺序：
+
+```text
+写接口函数
+-> 写最小实现
+-> 接入 CMake
+-> 接入 Sandbox
+-> 写测试或 smoke test
+-> 回到文档确认验收标准
+```
+
+不要一开始追求完整实现。每个函数先做到“能表达职责、能被调用、能被验证”，再逐步补复杂逻辑。
