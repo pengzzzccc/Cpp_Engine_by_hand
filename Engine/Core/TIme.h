@@ -7,4 +7,5 @@ public:
     double Now();
     void UpdateFrameTime();
     double DeltaTime();
+    // test
 };
