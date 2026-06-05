@@ -16,6 +16,11 @@
 
 具体 C++ 实现代码由你逐步完成。文档只规定目标、边界、模块职责和验收标准。
 
+```bash
+# to build
+ rm -rf build && cmake -B build && cmake --build build
+```
+
 ## Topics Covered
 
 - C++17 工程组织

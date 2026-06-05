@@ -1,8 +1,12 @@
 #include "Core/Application.h"
-#include <iostream>
-#include <vector>
 
 int main()
 {
+    Application app;
+    if (app.Init())
+    {
+        app.Run();
+        app.Shutdown();
+    }
     return 0;
 }

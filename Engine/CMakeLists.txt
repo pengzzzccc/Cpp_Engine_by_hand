@@ -4,7 +4,13 @@ target_sources(Engine
     PRIVATE
         Core/Application.cpp
         Core/Layer.cpp
+        Core/Log.cpp
 )
+
+# target_compile_definitions(Engine
+#     PUBLIC
+#         _GNU_SOURCE
+# )
 
 target_include_directories(Engine
     PUBLIC

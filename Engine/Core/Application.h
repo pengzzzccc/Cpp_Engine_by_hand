@@ -15,7 +15,7 @@ public:
     void Shutdown();
 
     void RequestClose();
-    void IsRunning();
+    bool IsRunning();
     void PushLayer(Layer *);
     void PopLayer(Layer *);
 };

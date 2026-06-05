@@ -1,16 +1,13 @@
 #include "Application.h"
-#include <iostream>
-#include <vector>
-
-using namespace std;
 
 void Application::Run()
 {
-    string s = "Hello Engine start";
 }
 
 bool Application::Init()
 {
+    Log::Init();
+
     return true;
 }
 
@@ -22,8 +19,9 @@ void Application::RequestClose()
 {
 }
 
-void Application::IsRunning()
+bool Application::IsRunning()
 {
+    return true;
 }
 
 void Application::PushLayer(Layer *)
