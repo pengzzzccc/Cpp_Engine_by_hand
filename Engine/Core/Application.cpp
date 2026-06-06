@@ -1,5 +1,6 @@
 #include "Application.h"
 
+
 void Application::Run()
 {
 }
@@ -7,6 +8,12 @@ void Application::Run()
 bool Application::Init()
 {
     Log::Init();
+
+    Time_E t;
+    double curr = t.DeltaTime();
+
+
+    Log::Info("Time: %f" ,curr);
 
     return true;
 }

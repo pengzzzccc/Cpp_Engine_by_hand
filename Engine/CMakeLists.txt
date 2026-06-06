@@ -5,12 +5,10 @@ target_sources(Engine
         Core/Application.cpp
         Core/Layer.cpp
         Core/Log.cpp
+        Core/Time_E.cpp
 )
 
-# target_compile_definitions(Engine
-#     PUBLIC
-#         _GNU_SOURCE
-# )
+
 
 target_include_directories(Engine
     PUBLIC
